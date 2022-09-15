@@ -1,28 +1,9 @@
 import {React} from "react";
-import * as ReactDOM from 'react-dom';
-import AppHeader from "./components/app-header";
-import SearchPanel from "./components/search-panel";
-import TodoList from "./components/todo-list";
+import {createRoot} from 'react-dom/client';
+
+import App from './components/app'
 
 const container = document.getElementById('root');
-const root = ReactDOM.createRoot(container);
-
-
-const App = () => {
-
-  const todoData = [
-    {label: 'Drink Coffee', important: false},
-    {label: 'Make Awesome App', important: true},
-    {label: 'Have a lunch', important: false},
-  ];
-
-  return(
-    <div>
-      <AppHeader />
-      <SearchPanel />
-      <TodoList todos = { todoData }/>
-    </div>
-  );
-};
+const root = createRoot(container);
 
 root.render(<App />);

@@ -1,9 +1,11 @@
 import { React } from 'react';
 
+import './search-panel.css'
+
 const SearchPanel = () => {
     const searchText = 'Type here to search'
     return(
-      <input placeholder={ searchText } />
+      <input className="search-input" placeholder={ searchText } />
     );
 };
 
